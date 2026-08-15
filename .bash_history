@@ -52,3 +52,43 @@ sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo apt-get update
 sudo apt-get install -y mongodb-org
+cat /etc/apt/sources.list.d/mongodb-org-8.0.list
+dpkg --print-architecture
+apt-cache policy mongodb-org
+ls /var/lib/apt/lists/ | grep mongodb
+zcat /var/lib/apt/lists/repo.mongodb.org_apt_debian_dists_trixie_mongodb-org_8.0_main_binary-amd64_Packages 2>/dev/null | wc -l
+sudo sed -i 's/trixie/bookworm/' /etc/apt/sources.list.d/mongodb-org-8.0.list
+cat /etc/apt/sources.list.d/mongodb-org-8.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl status mongod
+mongosh
+sudo apt update
+sudo apt install git
+git --version
+pwd
+npm install
+git init
+git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@exemplo.com"
+git config --global user.name "rapharudnik"
+git config --global user.email "rapharudnik@gmail.com"
+echo "node_modules/
+.env
+*.log" > .gitignore
+git add .
+git commit -m "Primeiro commit do backend"
+git remote add origin https://github.com/rapharudnik/back-end_project.git
+git branch -M main
+git push -u origin main
+git config --global credential.helper store
+git push
+npm install
+ls -la
+cat package-lock.json
+git log --oneline -- package.json
+cat .gitignore
+find / -maxdepth 4 -name "package.json" 2>/dev/null
+npm init -y
